@@ -1,0 +1,20 @@
+@import url(./aside.css);
+@import url(./main.css);
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #3c3c3c;
+    display: flex;
+    align-items: center;
+}
+
+.main-wrapper {
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 700px;
+    height: 100%;
+    display: flex;
+    background-color: #202020;
+}

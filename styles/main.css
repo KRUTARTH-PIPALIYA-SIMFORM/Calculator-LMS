@@ -1,0 +1,17 @@
+main {
+    flex: 3;
+}
+
+.main-header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-header-hamburger {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    text-decoration: none;
+}
