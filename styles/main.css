@@ -1,9 +1,13 @@
 main {
+    min-width: 0px;
     flex: 3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
+
+    @media(max-width: 340px){
+        justify-content: start;
+    }
 }
 
 button {
@@ -15,6 +19,7 @@ button {
     display: flex;
     align-items: center;
     gap: 1rem;
+    overflow-x: auto;
 }
 
 .main-header-hamburger {
@@ -39,6 +44,10 @@ button {
     border: none;
     text-align: right;
     padding: 0.2rem;
+
+    @media(max-width: 340px){
+        font-size: 2rem;
+    }
 }
 
 .main-input::placeholder {
@@ -50,12 +59,16 @@ button {
 }
 
 .function-row {
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
     display: flex;
     gap: 1rem;
 }
 
 .function-button {
     padding: 0.5rem 1rem;
+    text-wrap-mode: nowrap;
 }
 
 .gray {

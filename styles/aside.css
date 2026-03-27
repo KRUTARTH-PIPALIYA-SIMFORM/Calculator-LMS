@@ -4,9 +4,9 @@ aside {
     flex-direction: column;
     gap: 1rem;
 
-    @media (max-width:500px) {
+    @media (max-width: 500px) {
         display: none;
-    }   
+    }
 }
 
 .aside-header {
@@ -23,5 +23,3 @@ aside {
 .history-list {
     list-style: none;
 }
-
-
