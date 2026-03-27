@@ -47,3 +47,7 @@ main {
 .disabled {
     cursor: not-allowed;
 }
+
+.operations {
+    border-top: 0.1rem rgba(128, 128, 128, 0.404) solid;
+}
