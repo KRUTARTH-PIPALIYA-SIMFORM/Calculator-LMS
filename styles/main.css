@@ -30,3 +30,20 @@ main {
 .main-input:focus {
     outline: none;
 }
+
+.function-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.function-button {
+    padding: 0.5rem 1rem;
+}
+
+.gray {
+    color: gray;
+}
+
+.disabled {
+    cursor: not-allowed;
+}
