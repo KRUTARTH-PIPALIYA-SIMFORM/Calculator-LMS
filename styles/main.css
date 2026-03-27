@@ -38,6 +38,7 @@ button {
     background-color: transparent;
     border: none;
     text-align: right;
+    padding: 0.2rem;
 }
 
 .main-input::placeholder {
