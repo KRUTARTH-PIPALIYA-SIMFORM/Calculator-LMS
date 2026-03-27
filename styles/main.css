@@ -2,6 +2,7 @@ main {
     flex: 3;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
 }
 
@@ -20,11 +21,15 @@ main {
 }
 
 .main-input {
-    font-size: 3rem;
+    font-size: 5rem;
     width: 100%;
     background-color: transparent;
     border: none;
     text-align: right;
+}
+
+.main-input::placeholder {
+    color: white;
 }
 
 .main-input:focus {
@@ -46,8 +51,4 @@ main {
 
 .disabled {
     cursor: not-allowed;
-}
-
-.operations {
-    border-top: 0.1rem rgba(128, 128, 128, 0.404) solid;
 }
