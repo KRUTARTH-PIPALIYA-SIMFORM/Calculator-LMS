@@ -24,7 +24,7 @@ export default function calculate(str = "") {
         while (operators.length) {
             if (bracketFlag && operators[operators.length - 1] === "(") {
                 operators.pop();
-                break;
+                return true;
             }
             operands.push(operators.pop());
         }
@@ -75,7 +75,9 @@ export default function calculate(str = "") {
                 break;
 
             case ")":
-                drainStack(true);
+                if (drainStack(true) !== true) {
+                    throw new SyntaxError("Enter Valid Parantheses pairs");
+                }
                 break;
 
             case "(":
@@ -106,5 +108,4 @@ export default function calculate(str = "") {
     }
     drainStack();
     evaluatePostfix(operands);
-    console.log(operands, operators, operand);
 }

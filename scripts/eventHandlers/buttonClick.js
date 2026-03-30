@@ -4,6 +4,7 @@ import {
     clearDisplayValue,
     deleteDisplayValue,
     displayString,
+    setDisplayValue,
 } from "../inputHandlers/index.js";
 
 export default function buttonClick(e) {
@@ -19,8 +20,16 @@ export default function buttonClick(e) {
                 break;
 
             case "CALCULATE":
-                calculate(displayString);
-                break;
+                try {
+                    calculate(displayString);
+                    break;
+                } catch (error) {
+                    console.error(error.message);
+                    alert(error.message);
+                    setDisplayValue(error.message);
+                } finally {
+                    break;
+                }
 
             default:
                 appendDisplayValue(value);

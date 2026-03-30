@@ -94,6 +94,14 @@ export default function evaluatePostfix(array = []) {
         }
     }
 
+    if (
+        result.length !== 1 ||
+        typeof result[0] !== "number" ||
+        isNaN(result[0])
+    ) {
+        throw new SyntaxError("Enter Valid expression");
+    }
+
     addHistory(result[0]);
     setDisplayValue(result[0]);
 }

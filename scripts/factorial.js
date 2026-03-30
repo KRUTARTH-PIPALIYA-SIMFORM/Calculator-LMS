@@ -5,6 +5,5 @@ export default function factorial(n) {
     while (--n) {
         ans *= n;
     }
-    console.log(ans);
     return ans;
 }
