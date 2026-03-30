@@ -1,8 +1,8 @@
 import evaluatePostfix from "./evaluatePostfix.js";
 
 const precedence = new Map([
-    ["-", 1],
-    ["+", 2],
+    ["-", 2],
+    ["+", 1],
     ["*", 3],
     ["/", 4],
     ["%", 5],
