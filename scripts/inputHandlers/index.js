@@ -1,3 +1,4 @@
+import calculate from "../calculate.js";
 import { renderHistory } from "../eventHandlers/addHistory.js";
 
 export let displayString = "";
@@ -29,3 +30,15 @@ export function clearDisplayValue() {
 export function renderDisplayValue() {
     inputTag.value = displayString;
 }
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        try {
+            calculate(displayString);
+        } catch (error) {
+            console.error(error.message);
+            alert(error.message);
+            setDisplayValue(error.message);
+        }
+    }
+});
