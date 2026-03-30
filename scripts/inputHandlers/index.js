@@ -36,7 +36,6 @@ document.addEventListener("keydown", (e) => {
 
     if (e.key === "Enter") {
         try {
-            console.log(displayString);
             calculate(displayString);
         } catch (error) {
             console.error(error.message);
