@@ -1,6 +1,10 @@
+import { renderHistory } from "../eventHandlers/addHistory.js";
+
 export let displayString = "";
 
 let inputTag = document.querySelector(".main-input-display > input");
+
+renderHistory();
 
 export function setDisplayValue(str = "") {
     displayString = str;
