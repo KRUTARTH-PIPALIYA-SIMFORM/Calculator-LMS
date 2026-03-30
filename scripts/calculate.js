@@ -170,24 +170,24 @@ function evaluatePostfix(array = []) {
                 case "%":
                     mod();
                     break;
-                
-                case '^':
+
+                case "^":
                     order();
                     break;
-                
-                case 'log':
+
+                case "log":
                     log();
                     break;
-                
-                case 'ln':
+
+                case "ln":
                     ln();
                     break;
-                
-                case 'sqrt':
+
+                case "sqrt":
                     sqrt();
                     break;
-                
-                case 'abs':
+
+                case "abs":
                     abs();
                     break;
             }
