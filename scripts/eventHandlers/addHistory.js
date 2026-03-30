@@ -1,6 +1,7 @@
 import { displayString } from "../inputHandlers/index.js";
 
-const history = [];
+let history = localStorage.getItem('calculation-history');
+history = history ? new Array(JSON.parse(history)) : [];
 
 export default function addHistory(str = "") {
     history.unshift([displayString, str]);
@@ -8,4 +9,5 @@ export default function addHistory(str = "") {
     li.className = "history-item";
     li.textContent = `${displayString} = ${str}`;
     document.querySelector(".history-list").prepend(li);
+    localStorage.setItem('calculation-history', JSON.stringify(history));
 }
