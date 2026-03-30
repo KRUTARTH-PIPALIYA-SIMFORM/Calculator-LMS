@@ -32,10 +32,12 @@ export function renderDisplayValue() {
 }
 
 document.addEventListener("keydown", (e) => {
+    displayString = inputTag.value;
+
     if (e.key === "Enter") {
         try {
-            console.log(inputTag.value);
-            calculate(inputTag.value);
+            console.log(displayString);
+            calculate(displayString);
         } catch (error) {
             console.error(error.message);
             alert(error.message);
