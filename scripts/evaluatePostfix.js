@@ -7,9 +7,9 @@ export default function evaluatePostfix(array = []) {
 
     const multiplication = () => result.push(result.pop() * result.pop());
 
-    const log = () => result.push(Math.log(result.pop()));
+    const log = () => result.push(Math.log10(result.pop()));
 
-    const ln = () => result.push(Math.ln(result.pop()));
+    const ln = () => result.push(Math.log(result.pop()));
 
     const sqrt = () => result.push(Math.sqrt(result.pop()));
 
