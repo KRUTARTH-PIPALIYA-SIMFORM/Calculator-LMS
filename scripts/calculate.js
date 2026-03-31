@@ -47,7 +47,8 @@ export default function calculate(str = "") {
         }
 
         let operator = "";
-
+        if (i >= str.length)
+            break;
         switch (str[i]) {
             case "l":
                 if (str.slice(i, i + 3) === "log") {
