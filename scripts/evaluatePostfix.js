@@ -88,6 +88,9 @@ export default function evaluatePostfix(array = []) {
                 case "!":
                     fact();
                     break;
+                
+                default:
+                    throw new SyntaxError("Add valid characters");
             }
         } else {
             result.push(array[i]);
