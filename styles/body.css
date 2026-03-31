@@ -1,6 +1,4 @@
 body {
-
-```Width : not required.
     height: 100vh;
     background-color: #3c3c3c;
     color: white;
@@ -13,7 +11,6 @@ body {
     margin: auto;
     width: 100%;
     flex: 1;
-    /* height: 100%; */
     max-width: 1000px;
     max-height: 700px;
     display: flex;
