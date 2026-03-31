@@ -85,7 +85,12 @@ export default function calculate(str = "") {
                 break;
 
             default:
-                operator = str[i];
+                if ('+-*^/%!'.indexOf(str[i]) !== -1) {
+                    operator = str[i];
+                }
+                else {
+                    throw new SyntaxError('Enter valid characters only')
+                }
                 break;
         }
 
