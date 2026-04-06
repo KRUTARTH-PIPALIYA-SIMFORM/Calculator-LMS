@@ -1,16 +1,16 @@
 import evaluatePostfix from "./evaluatePostfix.js";
 
 const precedence = new Map([
-    ["-", 2],
+    ["-", 1],
     ["+", 1],
-    ["*", 3],
-    ["/", 4],
-    ["%", 5],
-    ["!", 6],
-    ["^", 7],
-    ["log", 8],
-    ["ln", 9],
-    ["abs", 10],
+    ["*", 2],
+    ["/", 2],
+    ["%", 3],
+    ["!", 4],
+    ["^", 5],
+    ["log", 6],
+    ["ln", 6],
+    ["abs", 6],
     ["(", 0],
     [")", -1],
 ]);
@@ -47,8 +47,7 @@ export default function calculate(str = "") {
         }
 
         let operator = "";
-        if (i >= str.length)
-            break;
+        if (i >= str.length) break;
         switch (str[i]) {
             case "l":
                 if (str.slice(i, i + 3) === "log") {
@@ -86,11 +85,10 @@ export default function calculate(str = "") {
                 break;
 
             default:
-                if ('+-*^/%!'.indexOf(str[i]) !== -1) {
+                if ("+-*^/%!".indexOf(str[i]) !== -1) {
                     operator = str[i];
-                }
-                else {
-                    throw new SyntaxError('Enter valid characters only')
+                } else {
+                    throw new SyntaxError("Enter valid characters only");
                 }
                 break;
         }
@@ -98,7 +96,7 @@ export default function calculate(str = "") {
         while (
             operator != "" &&
             operators.length &&
-            precedence.get(operators[operators.length - 1]) >
+            precedence.get(operators[operators.length - 1]) >=
                 precedence.get(operator)
         ) {
             operands.push(operators.pop());
