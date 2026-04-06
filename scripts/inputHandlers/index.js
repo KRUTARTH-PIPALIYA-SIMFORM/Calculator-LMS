@@ -38,7 +38,6 @@ document.addEventListener("keydown", (e) => {
         try {
             calculate(displayString);
         } catch (error) {
-            console.error(error.message);
             alert(error.message);
             setDisplayValue(error.message);
         }

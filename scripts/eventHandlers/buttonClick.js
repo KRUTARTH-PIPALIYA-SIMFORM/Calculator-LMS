@@ -24,7 +24,6 @@ export default function buttonClick(e) {
                     calculate(displayString);
                     break;
                 } catch (error) {
-                    console.error(error.message);
                     alert(error.message);
                     setDisplayValue(error.message);
                 } finally {
