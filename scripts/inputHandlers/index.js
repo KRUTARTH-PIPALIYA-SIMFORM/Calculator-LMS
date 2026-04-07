@@ -18,7 +18,7 @@ export function appendDisplayValue(str = "") {
 }
 
 export function deleteDisplayValue() {
-    setDisplayValue(displayString.slice(0, -1));
+    setDisplayValue(('' + displayString).slice(0, -1));
     renderDisplayValue();
 }
 
