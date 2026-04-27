@@ -45,6 +45,7 @@ button {
     border: none;
     text-align: right;
     padding: 0.2rem;
+    color: white;
 
     @media (max-width: 340px) {
         font-size: 2rem;

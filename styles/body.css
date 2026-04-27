@@ -15,4 +15,5 @@ body {
     max-height: 700px;
     display: flex;
     background-color: #202020;
+    overflow: hidden;
 }

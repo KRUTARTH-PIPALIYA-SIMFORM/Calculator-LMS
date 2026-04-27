@@ -9,7 +9,7 @@
         <title>Calculator</title>
 
         <link rel="stylesheet" href="styles/index.css" />
-        <script src="scripts/index.js" defer></script>
+        <script src="scripts/index.js" type="module" defer></script>
     </head>
     <body>
         <div class="main-wrapper">
@@ -18,7 +18,7 @@
                     <h1>Scientific</h1>
                     <button
                         class="main-header-history"
-                        aria-label="toggle-history"
+                        aria-label="toggle-hamburger"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -38,19 +38,12 @@
                     </button>
                 </header>
                 <div class="main-input-display">
-                    <input
-                        type="text"
-                        readonly
-                        class="main-input"
-                        placeholder="0"
-                    />
+                    <input type="text" class="main-input" placeholder="0" />
                 </div>
                 <div class="buttons-components-wrapper">
                     <div class="functions-container">
                         <div class="function-row">
-                            <div class="function-button disabled disabled">
-                                DEG
-                            </div>
+                            <div class="function-button disabled">DEG</div>
                             <div class="function-button disabled">F-E</div>
                         </div>
                         <div class="function-row">
@@ -70,153 +63,254 @@
                         </div>
 
                         <div class="buttons-grid-wrapper">
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button disabled"
+                                appendable=""
+                            >
                                 2nd
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="3.14"
+                            >
                                 π
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="2.718"
+                            >
                                 e
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="CLEAR"
+                            >
                                 C
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="DELETE"
+                            >
                                 ⌫
                             </button>
 
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="^2"
+                            >
                                 x²
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="1/("
+                            >
                                 1/x
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="abs("
+                            >
                                 |x|
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="2.718^("
+                            >
                                 exp
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="%"
+                            >
                                 mod
                             </button>
 
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="sqrt("
+                            >
                                 ²√x
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="("
+                            >
                                 (
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable=")"
+                            >
                                 )
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="!"
+                            >
                                 n!
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="/"
+                            >
                                 ÷
                             </button>
 
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="^"
+                            >
                                 xʸ
                             </button>
                             <button
                                 aria-label="test"
                                 class="operations-button numbers"
+                                appendable="7"
                             >
                                 7
                             </button>
                             <button
                                 aria-label="test"
                                 class="operations-button numbers"
+                                appendable="8"
                             >
                                 8
                             </button>
                             <button
                                 aria-label="test"
                                 class="operations-button numbers"
+                                appendable="9"
                             >
                                 9
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="*"
+                            >
                                 ×
                             </button>
 
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="10^"
+                            >
                                 10ˣ
                             </button>
                             <button
                                 aria-label="test"
                                 class="operations-button numbers"
+                                appendable="4"
                             >
                                 4
                             </button>
                             <button
                                 aria-label="test"
                                 class="operations-button numbers"
+                                appendable="5"
                             >
                                 5
                             </button>
                             <button
                                 aria-label="test"
                                 class="operations-button numbers"
+                                appendable="6"
                             >
                                 6
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="-"
+                            >
                                 −
                             </button>
 
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="log("
+                            >
                                 log
                             </button>
                             <button
                                 aria-label="test"
                                 class="operations-button numbers"
+                                appendable="1"
                             >
                                 1
                             </button>
                             <button
                                 aria-label="test"
                                 class="operations-button numbers"
+                                appendable="2"
                             >
                                 2
                             </button>
                             <button
                                 aria-label="test"
                                 class="operations-button numbers"
+                                appendable="3"
                             >
                                 3
                             </button>
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="+"
+                            >
                                 +
                             </button>
 
-                            <button aria-label="test" class="operations-button">
+                            <button
+                                aria-label="test"
+                                class="operations-button"
+                                appendable="ln("
+                            >
                                 ln
                             </button>
                             <button
                                 aria-label="test"
                                 class="operations-button numbers"
+                                appendable="-"
                             >
                                 ±
                             </button>
                             <button
                                 aria-label="test"
                                 class="operations-button numbers"
+                                appendable="0"
                             >
                                 0
                             </button>
                             <button
                                 aria-label="test"
                                 class="operations-button numbers"
+                                appendable="."
                             >
                                 .
                             </button>
                             <button
                                 aria-label="test"
                                 class="operations-button equals"
+                                appendable="CALCULATE"
                             >
                                 =
                             </button>
@@ -229,103 +323,7 @@
                     <h2>History</h2>
                 </header>
                 <div class="history-container">
-                    <ul class="history-list">
-                        <li class="history-item">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Architecto vel impedit delectus reprehenderit
-                            quae quaerat cupiditate, culpa ipsam soluta fugit
-                            quia dolorem voluptas consectetur mollitia
-                            doloremque maiores laudantium, maxime debitis.
-                            Voluptate culpa aliquid eius deleniti quos fuga.
-                            Nostrum architecto alias ad? Velit voluptas
-                            praesentium tempore adipisci autem sapiente sunt,
-                            facilis accusantium fugiat iste, non placeat! Nihil
-                            culpa optio illo dignissimos! Culpa quod molestias
-                            sed. Distinctio, suscipit! Maiores omnis autem id,
-                            dolorem perferendis sequi modi, hic aliquid quos
-                            aperiam sunt illum in cupiditate eius. Dolor
-                            molestias, enim nam aspernatur ullam ab. Corrupti
-                            culpa omnis deleniti voluptates eius delectus
-                            consequatur iusto, nam, iure repellendus fugit nobis
-                            necessitatibus, cupiditate sunt repellat. Amet eius
-                            fugit eaque ducimus totam voluptatum excepturi ex
-                            repellendus omnis incidunt! Recusandae tempora
-                            obcaecati ad perferendis harum eligendi sed,
-                            explicabo enim voluptate iusto vel odit sit, soluta
-                            mollitia repellat reprehenderit dignissimos nemo,
-                            beatae autem dolores ab? Nesciunt, aliquid vel? Id,
-                            accusamus! Velit officia laboriosam suscipit
-                            incidunt delectus culpa saepe expedita praesentium
-                            commodi beatae blanditiis exercitationem quas, ipsa
-                            perspiciatis. Minus libero consectetur aliquid,
-                            dignissimos possimus nam soluta reiciendis, facere
-                            sint, aspernatur iure. Ullam temporibus vel placeat
-                            similique autem, dolore qui nulla ipsam laudantium?
-                            Voluptatibus perferendis itaque neque nulla
-                            consequuntur? Magni delectus corrupti debitis eius!
-                            Nisi consectetur repellendus accusamus eos quidem
-                            aperiam nulla. Unde placeat, nisi dolorum eum
-                            debitis rem explicabo, sed assumenda repellendus
-                            consectetur ullam numquam dolor enim quos illum
-                            aperiam nemo eos veniam commodi sint saepe atque
-                            fugit maxime! Natus, non! Quo commodi eum aspernatur
-                            dolorum adipisci temporibus quaerat repudiandae
-                            magni dicta voluptatibus molestias maxime illum
-                            sequi voluptatem expedita autem est iste repellat et
-                            necessitatibus ducimus, repellendus eligendi?
-                            Recusandae, alias earum! Minima corrupti, quisquam
-                            id unde voluptatem illum ex delectus excepturi
-                            officiis blanditiis voluptas mollitia ipsum eveniet
-                            placeat, corporis quod, asperiores quis vero aliquid
-                            quam nesciunt assumenda. Ea esse impedit cum!
-                            Molestiae doloremque voluptatum eum dicta unde
-                            officiis possimus animi, quae nemo facilis. Odio
-                            ipsa maxime eos. Tempore distinctio qui nobis autem?
-                            Fuga eos officiis accusantium laudantium aspernatur
-                            numquam iure esse. Numquam molestiae dicta, vel
-                            quaerat explicabo cumque sit? Excepturi nobis minus
-                            officia perspiciatis sapiente eum repudiandae enim
-                            sint alias veritatis maxime veniam dolorum qui
-                            repellendus, id corrupti facere exercitationem ex!
-                            Voluptates repudiandae, blanditiis est neque non
-                            asperiores fuga qui nostrum ex necessitatibus,
-                            cupiditate incidunt at labore ab in dolorem minus
-                            consequatur adipisci similique tenetur delectus
-                            fugit. Excepturi voluptatem voluptate et. Voluptas
-                            voluptatem iusto cupiditate, ad officiis molestias!
-                            Assumenda animi cupiditate modi fugiat obcaecati,
-                            quaerat sint praesentium ipsa doloremque, excepturi
-                            blanditiis quasi quod magnam nemo vero distinctio!
-                            Eaque ab nihil similique. Odio necessitatibus in
-                            dignissimos obcaecati atque nostrum praesentium quas
-                            facere nemo vero quia temporibus perspiciatis quod,
-                            earum quo! Ipsa ratione commodi velit exercitationem
-                            ullam aliquid laborum sed error explicabo officia.
-                            Ex quas vero illum odit tempora natus obcaecati
-                            delectus sunt minus suscipit neque deserunt
-                            reiciendis quia quos, sequi est adipisci temporibus
-                            eius animi tenetur dolore amet excepturi! Ipsa,
-                            tempora repellat. Ex, sint amet. Molestias,
-                            temporibus quae sed iusto incidunt harum qui vero.
-                            Vel repudiandae eligendi cupiditate corporis vero
-                            recusandae sequi est dicta facilis eius quidem
-                            quisquam maiores illo, fugit accusantium. Saepe nam
-                            ipsa ad amet corrupti! Numquam ratione quas ipsa
-                            quae nulla voluptatibus, esse fuga eaque corporis
-                            explicabo adipisci officiis ea! Totam, quae?
-                            Praesentium deleniti quas, itaque enim aperiam
-                            delectus? Consectetur omnis aspernatur debitis.
-                            Accusamus perferendis dolores veniam nostrum saepe
-                            magnam delectus, architecto voluptatem eius aliquam
-                            ratione blanditiis distinctio ipsum? At magnam
-                            neque, voluptatum eaque animi maiores voluptate
-                            delectus quod. Iusto at, cum accusantium pariatur
-                            tempora quisquam dolorum magnam iste iure ut dolorem
-                            repellat maiores dignissimos ullam alias quasi,
-                            dolore quod, saepe animi eveniet et. Nemo soluta
-                            ratione quo officia.
-                        </li>
-                    </ul>
+                    <ul class="history-list"></ul>
                 </div>
             </aside>
         </div>
